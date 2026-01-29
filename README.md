@@ -28,7 +28,9 @@ Auralis is a text-to-speech engine that makes voice generation practical for rea
 
 3. Install Auralis:
    ```bash
-   pip install auralis
+   git clone https://github.com/yourusername/Auralis
+   cd Auralis
+   pip install -e ".[dev,test]"
    ```
 
 and then you can try it out via **python**
