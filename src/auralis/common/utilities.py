@@ -84,6 +84,8 @@ def load_audio(audiopath, sampling_rate):
     Returns:
         torch.Tensor: Preprocessed audio tensor of shape [1, samples].
     """
+    if isinstance(audiopath, bytes):
+        audiopath = io.BytesIO(audiopath)
     audio, lsr = torchaudio.load(audiopath)
 
     # Stereo to mono if needed

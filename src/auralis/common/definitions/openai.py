@@ -116,7 +116,7 @@ class AudioSpeechGenerationRequest(BaseModel):
         response_format: Literal["mp3", "opus", "aac", "flac", "wav", "pcm"] = Field(
             default='mp3', description="List of base64-encoded audio files"
         )
-        speed: float = Field(default=1.0, description="List of base64-encoded audio files"),
+        speed: float = Field(default=1.0, description="List of base64-encoded audio files")
 
         # TTSRequest parameters
         enhance_speech: bool = Field(default=tts_defaults['enhance_speech'])
